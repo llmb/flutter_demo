@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-///此方法是单利的，也就是只有第一次调用[ScreenUtil(context)]时会创建对象,
+///单利模式<br>
 ///在此对象未创建之前，请不要调其它任何静态方法，否则会抛空指针异常.
-///在创建对象时context也不能为null，否则同样抛异常
+///在调用[init]时context也不能为null，否则同样抛异常
 class ScreenUtil {
   static ScreenUtil _instance;
 
@@ -18,7 +18,25 @@ class ScreenUtil {
   double _bottomBarHeight;
   double _textScaleFactor;
 
-  ScreenUtil._init(BuildContext context) {
+  ScreenUtil._init();
+
+  // 单利方法
+  factory ScreenUtil() => _getInstance();
+
+  static ScreenUtil _getInstance() {
+    if (_instance == null) {
+      _instance = new ScreenUtil._init();
+    }
+    return _instance;
+  }
+
+  void init(BuildContext context, {int width, int height}) {
+    _designWidth = width;
+    _designHeight = height;
+
+    if (context == null) {
+      throw Exception("BuildContext could not be null");
+    }
     MediaQueryData mediaQuery = MediaQuery.of(context);
     _mediaQueryData = mediaQuery;
     _pixelRatio = mediaQuery.devicePixelRatio;
@@ -27,30 +45,6 @@ class ScreenUtil {
     _statusBarHeight = mediaQuery.padding.top;
     _bottomBarHeight = _mediaQueryData.padding.bottom;
     _textScaleFactor = mediaQuery.textScaleFactor;
-    print("screen width:" + _screenWidth.toString());
-    print("screen height:" + _screenHeight.toString());
-    print("screen Pixel:" + _pixelRatio.toString());
-    print("screen bar height:" + _statusBarHeight.toString());
-    print("screen bottom height:" + _bottomBarHeight.toString());
-    print("text Scale Factor:" + _textScaleFactor.toString());
-  }
-
-  // 工厂模式
-  factory ScreenUtil(BuildContext context) => _getInstance(context);
-
-  static ScreenUtil _getInstance(BuildContext context) {
-    if (_instance == null) {
-      if (context == null) {
-        throw Exception("BuildContext could not be null");
-      }
-      _instance = new ScreenUtil._init(context);
-    }
-    return _instance;
-  }
-
-  void init({int width, int height}) {
-    _designWidth = width;
-    _designHeight = height;
   }
 
   static MediaQueryData get mediaQueryData => _instance._mediaQueryData;

@@ -21,7 +21,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    ScreenUtil(context).init(width: 1080, height: 1920);
+    ScreenUtil().init(context, width: 1080, height: 1920);
     return Scaffold(
       appBar: AppBar(
         title: Text(HomePage._title),
