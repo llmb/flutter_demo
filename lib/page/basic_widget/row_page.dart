@@ -4,10 +4,9 @@ import 'package:flutter/material.dart';
 
 //公用类
 import '../../common/util/screen_utils.dart';
+import '../../common/string/strings.dart';
 
 class RowPage extends StatefulWidget {
-  static const String _title = "Row";
-
   @override
   State<StatefulWidget> createState() => _RowPageState();
 }
@@ -17,7 +16,7 @@ class _RowPageState extends State<RowPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(RowPage._title),
+        title: Text(Strings.of(context).row),
       ),
       body: Center(
           //heightFactor和widthFactor如果不指定，则它会尽可能大，

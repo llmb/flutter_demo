@@ -1,11 +1,12 @@
+//第三方
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
+//公用类
 import '../../common/util/screen_utils.dart';
+import '../../common/string/strings.dart';
 
 class ContainerPage extends StatefulWidget {
-  static const String _title = "Container";
-
   @override
   State<StatefulWidget> createState() => _ContainerPageState();
 }
@@ -15,7 +16,7 @@ class _ContainerPageState extends State<ContainerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(ContainerPage._title),
+        title: Text(Strings.of(context).container),
       ),
       body: Center(
         //heightFactor和widthFactor如果不指定，则它会尽可能大，
@@ -28,7 +29,7 @@ class _ContainerPageState extends State<ContainerPage> {
         // 文本也会被完全绘制出来，高度不会出现裁剪，
         // 只有当横向不能够完全绘制出来时，纵向高度不够时才会被裁剪，猜测是Bug!
         child: new Container(
-          //约束宽高
+            //约束宽高
             width: ScreenUtil.scaleWidth(600),
             height: ScreenUtil.scaleHeight(300),
             //约束宽高最大值和最小值，如果width和height值不在此约束值范围之间，则无效
@@ -50,7 +51,7 @@ class _ContainerPageState extends State<ContainerPage> {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image:
-                NetworkImage('https://www.zybuluo.com/static/img/logo.png'),
+                    NetworkImage('https://www.zybuluo.com/static/img/logo.png'),
                 centerSlice: Rect.fromLTRB(0.0, 0.0, 600.0, 600.0),
               ),
             ),

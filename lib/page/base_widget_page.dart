@@ -4,15 +4,12 @@ import 'package:flutter/material.dart';
 //公用类
 import '../common/util/screen_utils.dart';
 import '../common/RouteConst.dart';
+import '../common/string/strings.dart';
 
 //widget
 import '../widget/button_item.dart';
 
 class BasicWidgetPage extends StatefulWidget {
-  static const String _title = "基础组件";
-  static const String _Container = "Container";
-  static const String _Row = "Row";
-
   BasicWidgetPage({Key key}) : super(key: key);
 
   @override
@@ -32,7 +29,7 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(BasicWidgetPage._title),
+        title: Text(Strings.of(context).basicWidget),
       ),
       body: Padding(
         padding: EdgeInsets.all(ScreenUtil.scaleWidth(10)),
@@ -40,13 +37,13 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             ButtonItem(
-              title: BasicWidgetPage._Container,
+              title: Strings.of(context).container,
               onClick: () {
                 widget._goContainer(context);
               },
             ),
             ButtonItem(
-              title: BasicWidgetPage._Row,
+              title: Strings.of(context).row,
               onClick: () {
                 widget._goRowPage(context);
               },

@@ -1,8 +1,11 @@
 //第三方
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 //公用类
 import './common/RouteConst.dart';
+import './common/string/strings_localizations_delegate.dart';
+import './common/string/strings.dart';
 
 //page
 import './page/base_widget_page.dart';
@@ -18,10 +21,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      onGenerateTitle: (context) {
+        return Strings.of(context).appName;
+      },
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          accentColor: Colors.blue,
+          primaryColor: Colors.blue,
+          primaryColorDark: Colors.blue),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        StringsLocalizationsDelegate.delegate
+      ],
+      supportedLocales: [
+        const Locale('zh', 'CH'),
+        const Locale('en', 'US'),
+      ],
       routes: {
         route_home_page: (_) => HomePage(),
         route_basic_widget_page: (_) => BasicWidgetPage(),

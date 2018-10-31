@@ -1,13 +1,15 @@
+//第三方
 import 'package:flutter/material.dart';
 
+//公用类
 import '../common/RouteConst.dart';
 import '../common/util/screen_utils.dart';
+import '../common/string/strings.dart';
+
+//widget
 import '../widget/button_item.dart';
 
 class HomePage extends StatefulWidget {
-  static const String _title = "首页";
-  static const String _buttonText1 = "基础组件";
-
   HomePage({Key key}) : super(key: key);
 
   @override
@@ -24,7 +26,7 @@ class _HomePageState extends State<HomePage> {
     ScreenUtil().init(context, width: 1080, height: 1920);
     return Scaffold(
       appBar: AppBar(
-        title: Text(HomePage._title),
+        title: Text(Strings.of(context).homePage),
       ),
       body: Padding(
         padding: EdgeInsets.all(ScreenUtil.scaleWidth(10)),
@@ -32,7 +34,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             ButtonItem(
-              title: HomePage._buttonText1,
+              title: Strings.of(context).basicWidget,
               onClick: () {
                 widget._goBasicWidget(context);
               },
