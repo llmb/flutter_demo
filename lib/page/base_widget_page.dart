@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 
 //公用类
+import '../common/util/navigator_utils.dart';
 import '../common/util/screen_utils.dart';
-import '../common/RouteConst.dart';
-import '../common/string/strings.dart';
+import '../common/localization/strings.dart';
 
 //widget
 import '../widget/button_item.dart';
@@ -14,14 +14,6 @@ class BasicWidgetPage extends StatefulWidget {
 
   @override
   _BasicWidgetPageState createState() => _BasicWidgetPageState();
-
-  void _goContainer(BuildContext context) {
-    Navigator.of(context).pushNamed(route_container_page);
-  }
-
-  void _goRowPage(BuildContext context) {
-    Navigator.of(context).pushNamed(route_row_page);
-  }
 }
 
 class _BasicWidgetPageState extends State<BasicWidgetPage> {
@@ -39,13 +31,13 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
             ButtonItem(
               title: Strings.of(context).container,
               onClick: () {
-                widget._goContainer(context);
+                NavigatorUtils.goContainerPage(context);
               },
             ),
             ButtonItem(
               title: Strings.of(context).row,
               onClick: () {
-                widget._goRowPage(context);
+                NavigatorUtils.goRowPage(context);
               },
             )
           ],

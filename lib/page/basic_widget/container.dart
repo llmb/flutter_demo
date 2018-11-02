@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 
 //公用类
 import '../../common/util/screen_utils.dart';
-import '../../common/string/strings.dart';
+import '../../common/localization/strings.dart';
 
 class ContainerPage extends StatefulWidget {
+  ContainerPage({Key key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => _ContainerPageState();
 }

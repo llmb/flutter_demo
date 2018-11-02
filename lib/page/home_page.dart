@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 
 //公用类
-import '../common/RouteConst.dart';
+import '../common/util/navigator_utils.dart';
 import '../common/util/screen_utils.dart';
-import '../common/string/strings.dart';
+import '../common/localization/strings.dart';
 
 //widget
 import '../widget/button_item.dart';
@@ -14,10 +14,6 @@ class HomePage extends StatefulWidget {
 
   @override
   _HomePageState createState() => _HomePageState();
-
-  void _goBasicWidget(BuildContext context) {
-    Navigator.of(context).pushNamed(route_basic_widget_page);
-  }
 }
 
 class _HomePageState extends State<HomePage> {
@@ -36,7 +32,7 @@ class _HomePageState extends State<HomePage> {
             ButtonItem(
               title: Strings.of(context).basicWidget,
               onClick: () {
-                widget._goBasicWidget(context);
+                NavigatorUtils.goBasicWidgetPage(context);
               },
             )
           ],
