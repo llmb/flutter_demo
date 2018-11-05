@@ -18,6 +18,7 @@ class Strings {
       'container': 'Container',
       'row': 'Row',
       'column': 'Column',
+      'image': 'Image',
     },
 
     //中文文本
@@ -28,6 +29,7 @@ class Strings {
       'container': 'Container',
       'row': '行布局',
       'column': '列布局',
+      'image': '图片布局',
     }
   };
 
@@ -43,4 +45,6 @@ class Strings {
   String get row => _localizedValues[locale.languageCode]['row'];
 
   String get column => _localizedValues[locale.languageCode]['column'];
+
+  String get image => _localizedValues[locale.languageCode]['image'];
 }

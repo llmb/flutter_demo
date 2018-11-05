@@ -73,20 +73,20 @@ class ScreenUtil {
 
   ///dp 根据设计稿的设备宽度适配
   ///高度也根据这个来做适配可以保证不变形
-  static scaleWidth(int width) =>
+  static scaleWidth(double width) =>
       width * _instance._screenWidth / _instance._designWidth;
 
   /// dp 根据设计稿的设备高度适配
   /// 当发现设计稿中的一屏显示的与当前样式效果不符合时,
   /// 或者形状有差异时,高度适配建议使用此方法
   /// 高度适配主要针对想根据设计稿的一屏展示一样的效果
-  static scaleHeight(int height) =>
+  static scaleHeight(double height) =>
       height * _instance._screenHeight / _instance._designHeight;
 
   ///字体大小适配方法
   ///@param fontSize 传入设计稿上字体的px ,
   ///@param allowFontScaling 控制字体是否要根据系统的“字体大小”辅助选项来进行缩放。默认值为true。
-  static scaleSp(int fontSize, [allowFontScaling = true]) => allowFontScaling
+  static scaleSp(double fontSize, [allowFontScaling = true]) => allowFontScaling
       ? scaleWidth(fontSize) *
           _instance._textScaleFactor *
           _instance._pixelRatio

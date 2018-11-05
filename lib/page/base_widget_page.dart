@@ -25,8 +25,8 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
       ),
       body: Padding(
         padding: EdgeInsets.all(ScreenUtil.scaleWidth(10)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+        child: ListView(
+          scrollDirection: Axis.vertical,
           children: <Widget>[
             ButtonItem(
               title: Strings.of(context).container,
@@ -44,6 +44,12 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
               title: Strings.of(context).column,
               onClick: () {
                 NavigatorUtils.goColumnPage(context);
+              },
+            ),
+            ButtonItem(
+              title: Strings.of(context).image,
+              onClick: () {
+                NavigatorUtils.goImagePage(context);
               },
             )
           ],

@@ -9,6 +9,7 @@ import '../../page/base_widget_page.dart';
 import '../../page/basic_widget/container.dart';
 import '../../page/basic_widget/row_page.dart';
 import '../../page/basic_widget/column_page.dart';
+import '../../page/basic_widget/image_page.dart';
 
 class NavigatorUtils {
   ///基础组件
@@ -37,5 +38,12 @@ class NavigatorUtils {
     Navigator.of(context).push(MaterialPageRoute(
         builder: (_) => new ColumnPage(),
         settings: RouteSettings(name: route_column_page)));
+  }
+
+  ///Image详情页
+  static goImagePage(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (_) => new ImagePage(),
+        settings: RouteSettings(name: route_image_page)));
   }
 }
