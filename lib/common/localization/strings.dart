@@ -16,7 +16,8 @@ class Strings {
       'home page': 'Home',
       'basic widget': 'basic widget',
       'container': 'Container',
-      'row': 'Row'
+      'row': 'Row',
+      'column': 'Column',
     },
 
     //中文文本
@@ -25,7 +26,8 @@ class Strings {
       'home page': '首页',
       'basic widget': '基础组件',
       'container': 'Container',
-      'row': '行布局'
+      'row': '行布局',
+      'column': '列布局',
     }
   };
 
@@ -33,9 +35,12 @@ class Strings {
 
   String get homePage => _localizedValues[locale.languageCode]['home page'];
 
-  String get basicWidget => _localizedValues[locale.languageCode]['basic widget'];
+  String get basicWidget =>
+      _localizedValues[locale.languageCode]['basic widget'];
 
   String get container => _localizedValues[locale.languageCode]['container'];
 
   String get row => _localizedValues[locale.languageCode]['row'];
+
+  String get column => _localizedValues[locale.languageCode]['column'];
 }

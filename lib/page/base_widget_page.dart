@@ -39,6 +39,12 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
               onClick: () {
                 NavigatorUtils.goRowPage(context);
               },
+            ),
+            ButtonItem(
+              title: Strings.of(context).column,
+              onClick: () {
+                NavigatorUtils.goColumnPage(context);
+              },
             )
           ],
         ),

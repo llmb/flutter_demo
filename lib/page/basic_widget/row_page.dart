@@ -31,29 +31,40 @@ class _RowPageState extends State<RowPage> {
           // 文本也会被完全绘制出来，高度不会出现裁剪，
           // 只有当横向不能够完全绘制出来时，纵向高度不够时才会被裁剪，猜测是Bug!
           child: Container(
-            color: Colors.green.shade800,
-            height: ScreenUtil.scaleHeight(600),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              verticalDirection: VerticalDirection.down,
-              textBaseline: TextBaseline.ideographic,
-              children: <Widget>[
-                Expanded(child:Container(
+        color: Colors.green.shade800,
+        height: ScreenUtil.scaleHeight(600),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          verticalDirection: VerticalDirection.up,
+          textDirection: TextDirection.rtl,
+          textBaseline: TextBaseline.ideographic,
+          children: <Widget>[
+            Expanded(
+                child: Container(
                   color: Colors.red.shade700,
-                  child:  Text('文本Acd',textAlign: TextAlign.center,textScaleFactor: 3.0,),
-                ), flex: 0),
-                Expanded(child: Container(
+                  child: Text(
+                    '文本Acd',
+                    textAlign: TextAlign.center,
+                    textScaleFactor: 3.0,
+                  ),
+                ),
+                flex: 0),
+            Expanded(
+                child: Container(
                   color: Colors.blue.shade700,
-                  child: Text('文本B',textAlign: TextAlign.center),
-                ), flex: 0),
-                Expanded(child: Container(
+                  child: Text('文本B', textAlign: TextAlign.center),
+                ),
+                flex: 0),
+            Expanded(
+                child: Container(
                   color: Colors.brown.shade700,
-                  child: Text('文本C',textAlign: TextAlign.center),
-                ), flex: 0),
-              ],
-            ),
-          )),
+                  child: Text('文本C', textAlign: TextAlign.center),
+                ),
+                flex: 0),
+          ],
+        ),
+      )),
     );
   }
 }

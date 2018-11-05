@@ -8,6 +8,7 @@ import '../constant/RouteConst.dart';
 import '../../page/base_widget_page.dart';
 import '../../page/basic_widget/container.dart';
 import '../../page/basic_widget/row_page.dart';
+import '../../page/basic_widget/column_page.dart';
 
 class NavigatorUtils {
   ///基础组件
@@ -29,5 +30,12 @@ class NavigatorUtils {
     Navigator.of(context).push(MaterialPageRoute(
         builder: (_) => RowPage(),
         settings: RouteSettings(name: route_row_page)));
+  }
+
+  ///Column详情页
+  static goColumnPage(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (_) => new ColumnPage(),
+        settings: RouteSettings(name: route_column_page)));
   }
 }

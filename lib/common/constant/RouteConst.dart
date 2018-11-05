@@ -9,3 +9,6 @@ const String route_container_page = "/route_container_page";
 
 ///路由到基础组件中Row详情
 const String route_row_page = "/route_row_page";
+
+///路由到基础组件中Column详情
+const String route_column_page = "/route_column_page";
