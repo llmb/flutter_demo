@@ -1,5 +1,7 @@
+// flutter
 import 'package:flutter/material.dart';
 
+/// 国际化
 class Strings {
   final Locale locale;
 

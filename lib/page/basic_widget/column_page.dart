@@ -1,10 +1,11 @@
-//第三方
+// flutter
 import 'package:flutter/material.dart';
 
-//公用类
-import '../../common/localization/strings.dart';
+// 公用类
 import '../../common/util/screen_utils.dart';
+import '../../common/localization/strings.dart';
 
+/// Column如果使用DemoPage
 class ColumnPage extends StatefulWidget {
   @override
   _ColumnPageState createState() => new _ColumnPageState();

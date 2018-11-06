@@ -1,11 +1,14 @@
-//第三方
+// dart
 import 'dart:math' as math;
+
+// flutter
 import 'package:flutter/material.dart';
 
 //公用类
 import '../../common/util/screen_utils.dart';
 import '../../common/localization/strings.dart';
 
+/// Container如果使用DemoPage
 class ContainerPage extends StatefulWidget {
   ContainerPage({Key key}) : super(key: key);
 

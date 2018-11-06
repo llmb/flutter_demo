@@ -1,14 +1,15 @@
-//第三方
+// flutter
 import 'package:flutter/material.dart';
 
-//公用类
-import '../common/util/navigator_utils.dart';
+// 公用类
 import '../common/util/screen_utils.dart';
+import '../common/util/navigator_utils.dart';
 import '../common/localization/strings.dart';
 
-//widget
+// widget
 import '../widget/button_item.dart';
 
+/// 首页
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
 

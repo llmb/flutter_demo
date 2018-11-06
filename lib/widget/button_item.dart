@@ -1,7 +1,10 @@
+// flutter
 import 'package:flutter/material.dart';
 
+// 通用类
 import '../common/util/screen_utils.dart';
 
+/// material design样式的可点击Button，设置按钮文本和点击事件
 class ButtonItem extends StatefulWidget {
   ButtonItem({Key key, this.title, this.onClick}) : super(key: key);
 

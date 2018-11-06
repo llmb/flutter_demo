@@ -1,12 +1,15 @@
-//第三方
+// dart
 import 'dart:io';
+
+// flutter
 import 'package:flutter/material.dart';
 
-//通用类
-import '../../common/localization/strings.dart';
-import '../../common/util/screen_utils.dart';
+// 通用类
 import '../../widget/button_item.dart';
+import '../../common/util/screen_utils.dart';
+import '../../common/localization/strings.dart';
 
+/// Image如果使用DemoPage
 class ImagePage extends StatefulWidget {
   ImagePage({Key key}) : super(key: key);
 

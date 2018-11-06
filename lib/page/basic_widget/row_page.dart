@@ -1,10 +1,11 @@
-//第三方
+// flutter
 import 'package:flutter/material.dart';
 
-//公用类
+// 公用类
 import '../../common/util/screen_utils.dart';
 import '../../common/localization/strings.dart';
 
+/// Row如果使用DemoPage
 class RowPage extends StatefulWidget {
   RowPage({Key key}) : super(key: key);
 

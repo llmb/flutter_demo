@@ -1,16 +1,17 @@
-//第三方
+// flutter
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-//公用类
-import './common/localization/strings_localizations_delegate.dart';
+// 通用类
 import './common/localization/strings.dart';
+import './common/localization/strings_localizations_delegate.dart';
 
-//page
+// page
 import './page/home_page.dart';
 
 void main() => runApp(MyApp());
 
+/// 程序入口
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
 

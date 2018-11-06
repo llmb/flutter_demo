@@ -1,11 +1,14 @@
-//第三方
+// dart
 import 'dart:async';
+
+// flutter
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show SynchronousFuture;
 
-//self
+// self
 import 'strings.dart';
 
+/// [Strings]初始化代理类
 class StringsLocalizationsDelegate extends LocalizationsDelegate<Strings> {
   const StringsLocalizationsDelegate();
 
