@@ -1,20 +1,35 @@
 //第三方
 import 'dart:io';
-import 'dart:async';
 import 'package:flutter/material.dart';
 
 //通用类
 import '../../common/localization/strings.dart';
 import '../../common/util/screen_utils.dart';
+import '../../widget/button_item.dart';
 
 class ImagePage extends StatefulWidget {
   ImagePage({Key key}) : super(key: key);
+
+  final String _url =
+      'http://upload-images.jianshu.io/upload_images/3230597-fea5278ed63ab737.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240';
 
   @override
   _ImagePageState createState() => new _ImagePageState();
 }
 
 class _ImagePageState extends State<ImagePage> {
+  String _url = 'https://www.zybuluo.com/static/img/logo.png';
+
+  void changeNetWorkImageUrl() {
+    setState(() {
+      if (_url == widget._url) {
+        _url = 'https://www.zybuluo.com/static/img/logo.png';
+      } else {
+        _url = widget._url;
+      }
+    });
+  }
+
   Widget _buildImageItem(String title, ImageType imageType) {
     Image image;
     switch (imageType) {
@@ -35,8 +50,14 @@ class _ImagePageState extends State<ImagePage> {
         break;
 
       case ImageType.network:
-        image = Image.network('https://www.zybuluo.com/static/img/logo.png',
-            alignment: Alignment.center, height: ScreenUtil.scaleHeight(400));
+        image = Image.network(
+          _url,
+          alignment: Alignment.center,
+          height: ScreenUtil.scaleHeight(400),
+          // gaplessPlayback为true时，如果当前url获取图像失败，则依然显示之前的图像，成功则显示新图像
+          // gaplessPlayback为false时，如果当前url获取图像失败，则什么都不显示，成功则显示新图像
+          gaplessPlayback: false,
+        );
         break;
 
       case ImageType.memory:
@@ -75,6 +96,10 @@ class _ImagePageState extends State<ImagePage> {
           children: <Widget>[
             _buildImageItem('这是Assets中的资源', ImageType.asset),
             _buildImageItem('这是网络资源', ImageType.network),
+            ButtonItem(
+              title: '修改网络图片地址',
+              onClick: changeNetWorkImageUrl,
+            ),
 //            _buildImageItem('这是本地文件', ImageType.file),
 //            _buildImageItem('这是二进制文件', ImageType.memory),
           ],
