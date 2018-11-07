@@ -22,6 +22,7 @@ class Strings {
       'column layout': 'Column Layout',
       'image layout': 'Image Layout',
       'text layout': 'Text Layout',
+      'icon layout': 'Icon Layout'
     },
 
     //中文文本
@@ -34,6 +35,7 @@ class Strings {
       'column layout': '列布局',
       'image layout': '图片布局',
       'text layout': '文本布局',
+      'icon layout': 'Icon布局'
     }
   };
 
@@ -53,4 +55,6 @@ class Strings {
   String get imageLayout => _localizedValues[locale.languageCode]['image layout'];
 
   String get textLayout => _localizedValues[locale.languageCode]['text layout'];
+
+  String get iconLayout => _localizedValues[locale.languageCode]['icon layout'];
 }

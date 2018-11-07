@@ -18,3 +18,7 @@ const String route_image_page = "/route_image_page";
 
 /// 路由到基础组件中Text详情
 const String route_text_page = "/route_text_page";
+
+/// 路由到基础组件中Icon详情
+const String route_icon_page = "/route_icon_page";
+

@@ -38,7 +38,7 @@ class _ImagePageState extends State<ImagePage> {
     switch (imageType) {
       case ImageType.asset:
         image = Image.asset(
-          'images/flutter.png',
+          'static/images/flutter.png',
           alignment: Alignment.center,
           height: ScreenUtil.scaleHeight(400),
         );

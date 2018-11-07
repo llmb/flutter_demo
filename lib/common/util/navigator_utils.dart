@@ -11,6 +11,7 @@ import '../../page/widget/row_page.dart';
 import '../../page/widget/column_page.dart';
 import '../../page/widget/image_page.dart';
 import '../../page/widget/text_page.dart';
+import '../../page/widget/icon_page.dart';
 
 /// 路由工具类
 class NavigatorUtils {
@@ -54,5 +55,12 @@ class NavigatorUtils {
     Navigator.of(context).push(MaterialPageRoute(
         builder: (_) => new TextPage(),
         settings: RouteSettings(name: route_text_page)));
+  }
+
+  /// Text详情页
+  static goIconPage(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (_) => new IconPage(),
+        settings: RouteSettings(name: route_icon_page)));
   }
 }

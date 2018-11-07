@@ -58,6 +58,12 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
               onClick: () {
                 NavigatorUtils.goTextPage(context);
               },
+            ),
+            ButtonItem(
+              title: Strings.of(context).iconLayout,
+              onClick: () {
+                NavigatorUtils.goIconPage(context);
+              },
             )
           ],
         ),
