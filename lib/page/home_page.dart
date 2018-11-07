@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             ButtonItem(
-              title: Strings.of(context).basicWidget,
+              title: Strings.of(context).widgetHome,
               onClick: () {
                 NavigatorUtils.goBasicWidgetPage(context);
               },

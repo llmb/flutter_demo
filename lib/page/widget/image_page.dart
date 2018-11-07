@@ -91,7 +91,7 @@ class _ImagePageState extends State<ImagePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(Strings.of(context).image),
+        title: Text(Strings.of(context).imageLayout),
       ),
       body: new Center(
         child: ListView(

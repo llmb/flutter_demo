@@ -18,7 +18,7 @@ class _RowPageState extends State<RowPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(Strings.of(context).row),
+        title: Text(Strings.of(context).rowLayout),
       ),
       body: Center(
 

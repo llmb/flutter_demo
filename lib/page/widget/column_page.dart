@@ -15,7 +15,7 @@ class _ColumnPageState extends State<ColumnPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(title: new Text(Strings.of(context).column)),
+      appBar: new AppBar(title: new Text(Strings.of(context).columnLayout)),
       body: new Center(
         child: new Container(
           color: Colors.green.shade800,

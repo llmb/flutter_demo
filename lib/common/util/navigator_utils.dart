@@ -5,15 +5,16 @@ import 'package:flutter/material.dart';
 import '../constant/RouteConst.dart';
 
 // page
-import '../../page/base_widget_page.dart';
-import '../../page/basic_widget/container.dart';
-import '../../page/basic_widget/row_page.dart';
-import '../../page/basic_widget/column_page.dart';
-import '../../page/basic_widget/image_page.dart';
+import '../../page/widget_home_page.dart';
+import '../../page/widget/container.dart';
+import '../../page/widget/row_page.dart';
+import '../../page/widget/column_page.dart';
+import '../../page/widget/image_page.dart';
+import '../../page/widget/text_page.dart';
 
 /// 路由工具类
 class NavigatorUtils {
-  /// 基础组件
+  /// 组件HomePage
   static goBasicWidgetPage(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(
         builder: (_) => BasicWidgetPage(),
@@ -46,5 +47,12 @@ class NavigatorUtils {
     Navigator.of(context).push(MaterialPageRoute(
         builder: (_) => new ImagePage(),
         settings: RouteSettings(name: route_image_page)));
+  }
+
+  /// Text详情页
+  static goTextPage(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (_) => new TextPage(),
+        settings: RouteSettings(name: route_text_page)));
   }
 }

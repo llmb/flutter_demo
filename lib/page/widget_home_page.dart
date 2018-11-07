@@ -9,7 +9,7 @@ import '../common/localization/strings.dart';
 // widget
 import '../widget/button_item.dart';
 
-/// 跳转到相关基础组件DemoPage
+/// 跳转到相关组件HomePage
 class BasicWidgetPage extends StatefulWidget {
   BasicWidgetPage({Key key}) : super(key: key);
 
@@ -22,7 +22,7 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(Strings.of(context).basicWidget),
+        title: Text(Strings.of(context).widgetHome),
       ),
       body: Padding(
         padding: EdgeInsets.all(ScreenUtil.scaleWidth(10)),
@@ -30,27 +30,33 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
           scrollDirection: Axis.vertical,
           children: <Widget>[
             ButtonItem(
-              title: Strings.of(context).container,
+              title: Strings.of(context).containerLayout,
               onClick: () {
                 NavigatorUtils.goContainerPage(context);
               },
             ),
             ButtonItem(
-              title: Strings.of(context).row,
+              title: Strings.of(context).rowLayout,
               onClick: () {
                 NavigatorUtils.goRowPage(context);
               },
             ),
             ButtonItem(
-              title: Strings.of(context).column,
+              title: Strings.of(context).columnLayout,
               onClick: () {
                 NavigatorUtils.goColumnPage(context);
               },
             ),
             ButtonItem(
-              title: Strings.of(context).image,
+              title: Strings.of(context).imageLayout,
               onClick: () {
                 NavigatorUtils.goImagePage(context);
+              },
+            ),
+            ButtonItem(
+              title: Strings.of(context).textLayout,
+              onClick: () {
+                NavigatorUtils.goTextPage(context);
               },
             )
           ],

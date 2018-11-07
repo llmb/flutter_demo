@@ -4,7 +4,7 @@ import 'dart:math' as math;
 // flutter
 import 'package:flutter/material.dart';
 
-//公用类
+// 公用类
 import '../../common/util/screen_utils.dart';
 import '../../common/localization/strings.dart';
 
@@ -21,7 +21,7 @@ class _ContainerPageState extends State<ContainerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(Strings.of(context).container),
+        title: Text(Strings.of(context).containerLayout),
       ),
       body: Center(
         //heightFactor和widthFactor如果不指定，则它会尽可能大，

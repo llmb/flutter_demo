@@ -15,3 +15,6 @@ const String route_column_page = "/route_column_page";
 
 /// 路由到基础组件中Image详情
 const String route_image_page = "/route_image_page";
+
+/// 路由到基础组件中Text详情
+const String route_text_page = "/route_text_page";
