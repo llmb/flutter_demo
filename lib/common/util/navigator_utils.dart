@@ -12,6 +12,7 @@ import '../../page/widget/column_page.dart';
 import '../../page/widget/image_page.dart';
 import '../../page/widget/text_page.dart';
 import '../../page/widget/icon_page.dart';
+import '../../page/widget/flutter_logo.dart';
 
 /// 路由工具类
 class NavigatorUtils {
@@ -62,5 +63,12 @@ class NavigatorUtils {
     Navigator.of(context).push(MaterialPageRoute(
         builder: (_) => new IconPage(),
         settings: RouteSettings(name: route_icon_page)));
+  }
+
+  /// FlutterLog详情页
+  static goFlutterLogPage(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (_) => new FlutterLogoPage(),
+        settings: RouteSettings(name: route_flutter_logo_page)));
   }
 }

@@ -22,3 +22,6 @@ const String route_text_page = "/route_text_page";
 /// 路由到基础组件中Icon详情
 const String route_icon_page = "/route_icon_page";
 
+/// 路由到基础组件中FlutterLogo详情
+const String route_flutter_logo_page = "/route_flutter_logo_page";
+

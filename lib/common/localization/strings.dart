@@ -22,7 +22,8 @@ class Strings {
       'column layout': 'Column Layout',
       'image layout': 'Image Layout',
       'text layout': 'Text Layout',
-      'icon layout': 'Icon Layout'
+      'icon layout': 'Icon Layout',
+      'flutter logo layout': 'FlutterLogo Layout'
     },
 
     //中文文本
@@ -35,7 +36,7 @@ class Strings {
       'column layout': '列布局',
       'image layout': '图片布局',
       'text layout': '文本布局',
-      'icon layout': 'Icon布局'
+      'flutter logo layout': 'FlutterLogo布局'
     }
   };
 
@@ -57,4 +58,6 @@ class Strings {
   String get textLayout => _localizedValues[locale.languageCode]['text layout'];
 
   String get iconLayout => _localizedValues[locale.languageCode]['icon layout'];
+
+  String get flutterLogoLayout => _localizedValues[locale.languageCode]['flutter logo layout'];
 }

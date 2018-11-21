@@ -64,6 +64,12 @@ class _BasicWidgetPageState extends State<BasicWidgetPage> {
               onClick: () {
                 NavigatorUtils.goIconPage(context);
               },
+            ),
+            ButtonItem(
+              title: Strings.of(context).flutterLogoLayout,
+              onClick: () {
+                NavigatorUtils.goFlutterLogPage(context);
+              },
             )
           ],
         ),
